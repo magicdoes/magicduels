@@ -1,0 +1,44 @@
+# MagicDuels configuration
+
+request-timeout-seconds: 60
+countdown-seconds: 3
+
+# Wagers require Vault + a Vault-compatible economy plugin.
+wagers:
+  enabled: true
+  minimum: 0
+  maximum: 1000000000
+
+# Commands players may still use while actively dueling.
+# Everything else is blocked.
+allowed-commands-during-duel:
+  - duel
+
+messages:
+  prefix: '&6&lMagicSMP &8» &r'
+  no-permission: '&cYou do not have permission to do that.'
+  players-only: '&cOnly players can use this command.'
+  arena-not-set: '&cThe duel arena is not fully set up yet.'
+  player-not-found: '&cThat player is not online.'
+  cannot-duel-self: '&cYou cannot duel yourself.'
+  already-dueling: '&cOne of you is already in a duel.'
+  request-sent: '&aDuel request sent to &e%player%&a.'
+  request-received: '&e%player% &ahas challenged you to a duel%wager%&a. Use &e/duel accept %player% &aor &e/duel deny %player%&a.'
+  request-expired: '&cThat duel request has expired.'
+  request-denied-sender: '&c%player% declined your duel request.'
+  request-denied-target: '&7You declined &e%player%&7''s duel request.'
+  no-request: '&cYou do not have a valid duel request from that player.'
+  countdown: '&e%seconds%...'
+  fight: '&c&lFIGHT!'
+  winner: '&6%winner% &awon the duel against &e%loser%&a!'
+  wager-winner: '&6%winner% &awon the duel and received &a$%amount%&6.'
+  commands-blocked: '&cYou cannot use that command while dueling.'
+  no-economy: '&cWagers are unavailable because Vault/economy is not hooked.'
+  wager-disabled: '&cDuel wagers are currently disabled.'
+  invalid-wager: '&cEnter a valid wager amount.'
+  wager-too-small: '&cThe wager must be at least $%amount%.'
+  wager-too-large: '&cThe wager cannot be more than $%amount%.'
+  not-enough-money: '&cOne of the players does not have enough money for that wager.'
+  arena-spawn-set: '&aDuel arena spawn %number% has been set.'
+  reloaded: '&aMagicDuels config reloaded.'
+  duel-cancelled: '&cThe duel was cancelled.'
